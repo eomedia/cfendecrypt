@@ -56,7 +56,3 @@ public string function cfendecrypt(required string password, required string act
 }
 
 </cfscript>
-
-
-
-

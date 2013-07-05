@@ -16,11 +16,12 @@ By creating unique secret keys for each password you make it more difficult for 
 <cfset local.password="test123">
 
 <cfoutput>
-	password set at #local.password#
+	Set Password =  #local.password#
+	<br><br>
+	<cfset encryptedPassword = cfendecrypt(local.password, "write", expandPath("."), "secretKey.txt") />
+	encryptedPassword = #encryptedPassword#
 	<br>
-	encryptedPassword = #cfendecrypt(local.password, "write", expandPath("."), "secretKey.txt")#
-	<br>
-	decryptedPassword = #cfendecrypt(local.password, "read", expandPath("."), "secretKey.txt")#
+	decryptedPassword = #cfendecrypt(encryptedPassword, "read", expandPath("."), "secretKey.txt")#
 
 </cfoutput>
 ```
