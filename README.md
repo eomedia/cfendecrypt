@@ -25,3 +25,5 @@ By creating unique secret keys for each password you make it more difficult for 
 
 </cfoutput>
 ```
+
+The secretKey.txt file is an example of the XML content created from the fileWrite function.
