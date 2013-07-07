@@ -7,8 +7,13 @@
  * @param dirPath 	directory path to use for reading/writing
  * @param fileName 	name of the file to read/write
  * @return Returns a string that is the encrypted/decrypted password. 
+ * 
  * @author Ryan Smith (rsmith@eomedia.com) 
- * @version 1, January 2013 
+ * @version 1, July 2013 
+ * 
+ * @licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/license
  */
 
 public string function cfendecrypt(required string password, required string action, required string dirPath, required string fileName) {
@@ -29,7 +34,7 @@ public string function cfendecrypt(required string password, required string act
 
  		// write xml file with secret key to the directory path
  		var writeFile = arguments.dirPath & "\" & arguments.fileName;
- 		FileWrite(writeFile, xmlFile);
+ 		fileWrite(writeFile, xmlFile);
 
  		var returnValue = encryptedPassword;
 
